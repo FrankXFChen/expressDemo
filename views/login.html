@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .head_style{
+                color:rgb(214, 49, 49);
+                background-color: rgb(135, 204, 204);
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+            <%- message %>
+        <div>
+            <span class="head_style">
+                This is Express
+            </span>
+        </div>
+        <div>
+            <fieldset id="loginfs">
+                <label>Username</label>
+                <input type="text" id="email-input" name="email">
+                <label>Password</label>
+                <input type="password" id="pwd-input" name="password">
+            </fieldset>
+            <button type="button" id="loginBtn">Login</button>
+        </div>
+    </body>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <script src="../public/javascripts/login.js" type="text/javascript" ></script>
+</html>

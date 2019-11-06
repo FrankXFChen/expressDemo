@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .head_style{
+                color:rgb(24, 111, 224);
+                font-size: 40px;
+            }
+            .item_style{
+                color:rgb(226, 97, 11)
+            }
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div>
+            <span class="head_style">
+                This is Home
+            </span>
+            <span style="float:right; margin-right:5%">
+                <a style="color:darkgray" href="logout">logout</a>
+            </span>
+        </div>
+        <div>
+            <h2 style='color:rgb(219, 28, 28)'>To Do List</h2>
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div id="todoListContainer">
+                <ul style="line-height:30px" id="listItemContainer">
+
+                </ul>
+            </div>
+        </div>
+        <div id="chartContainer" style="height: 370px; width: 100%;">
+
+        </div>
+    </body>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+    <script src="../public/javascripts/home.js" type="text/javascript" ></script>
+</html>
