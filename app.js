@@ -1,5 +1,8 @@
+require('dotenv').config();
+var env = process.env;
 var createError = require('http-errors');
 var express = require('express');
+var cors = require('cors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -24,6 +27,12 @@ app.set('view engine', 'html');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+//app.use(cors());
+// app.use(cors({
+//   origin:['http://localhost:8083'],
+//   methods:['GET','POST'],
+//   alloweHeaders:['Conten-Type', 'Authorization']
+// }));
 app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public', express.static(path.join(__dirname, 'public')))
@@ -46,7 +55,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use('/', indexRouter);
+app.use('/LIST_HUB', indexRouter);
 app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 
@@ -66,8 +75,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(3667, function () {
+  console.log('Example app listening on port 3667!');
 });
 
 module.exports = app;

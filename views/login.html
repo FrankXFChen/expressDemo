@@ -4,6 +4,16 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <style>
+            .center_div{
+                position:absolute;
+                top:0;
+                bottom: 0;
+                left:0;
+                right:0;
+                margin:auto;
+                height:200px;
+                width:200px;
+            }
             .head_style{
                 color:rgb(214, 49, 49);
                 background-color: rgb(135, 204, 204);
@@ -12,20 +22,22 @@
         </style>
     </head>
     <body>
+        <div class="center_div">
             <%- message %>
-        <div>
-            <span class="head_style">
-                This is Express
-            </span>
-        </div>
-        <div>
-            <fieldset id="loginfs">
-                <label>Username</label>
-                <input type="text" id="email-input" name="email">
-                <label>Password</label>
-                <input type="password" id="pwd-input" name="password">
-            </fieldset>
-            <button type="button" id="loginBtn">Login</button>
+                <div>
+                    <span class="head_style">
+                        This is Express
+                    </span>
+                </div>
+                <div>
+                    <fieldset id="loginfs">
+                        <label>Username</label>
+                        <input type="text" id="email-input" name="email">
+                        <label>Password</label>
+                        <input type="password" id="pwd-input" name="password">
+                    </fieldset>
+                    <button type="button" id="loginBtn">Login</button>
+                </div>
         </div>
     </body>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>

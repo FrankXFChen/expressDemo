@@ -60,4 +60,22 @@ $(function(){
         });
         chart.render();
     }
+
+    function deepCopy(obj){
+        if(Array.isArray(obj)){
+            let copyedObj = [];
+            for(let [index,val] of obj.entries()){
+                copyedObj[index] = deepCopy(val);
+            }
+            return copyedObj;
+        }else if(obj instanceof Object){
+            let copyedObj = {};
+            for(let key in obj){
+                copyedObj[key] = deepCopy(obj[key]);
+            }
+            return copyedObj;
+        }else{
+            return obj;
+        }
+    }
 })
